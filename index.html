@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StepListen - Your Smart Language Learning Companion</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 2rem;
+        }
+
+        header h1 {
+            margin-top: 0.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        header h2 {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* 主要内容区域 */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a73e8;
+        }
+
+        /* Features Section */
+        .features {
+            margin: 2rem 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #1a73e8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            color: #1a73e8;
+            margin-bottom: 1rem;
+        }
+
+        /* 使用场景区域 */
+        .use-cases {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .use-cases ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        .use-cases li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .use-cases li:before {
+            content: "✓";
+            color: #1a73e8;
+            position: absolute;
+            left: 0;
+        }
+
+        /* 故事区域 */
+        .story {
+            background: #f0f7ff;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        /* CTA 按钮 */
+        .cta-button {
+            display: inline-block;
+            background: #1a73e8;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem 0;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #0d47a1;
+        }
+
+        /* CTA 区域 */
+        .cta {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: white;
+            border-radius: 8px;
+            margin: 3rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta h2 {
+            color: #1a73e8;
+            margin-bottom: 1rem;
+        }
+
+        /* 添加容器来控制宽度 */
+        .cta .download-content {
+            position: relative;
+            width: 400px;  /* 与上面的下载按钮保持一致 */
+            margin: 0 auto;
+        }
+
+        .cta .cta-button {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 1rem;  /* 这里不需要左侧padding，因为没有logo */
+            position: relative;
+            white-space: nowrap;
+            font-size: 1.1rem;
+        }
+
+        /* 系统要求区域 */
+        .requirements {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .requirements-links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .requirements .download-content {
+            position: relative;
+            width: 400px;
+        }
+
+        .doc-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            color: white;
+            background: #1a73e8;
+            text-decoration: none;
+            padding: 1rem 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            line-height: 1.2;
+            height: 48px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(26, 115, 232, 0.2);
+            white-space: nowrap;
+            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+        }
+
+        .doc-link:hover {
+            background: linear-gradient(135deg, #0d47a1, #1a73e8);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(26, 115, 232, 0.3);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .requirements .download-content {
+                width: 320px;
+            }
+            
+            .doc-link {
+                font-size: 1rem;
+                height: 44px;
+            }
+        }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header h2 {
+                font-size: 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .logo {
+                height: 50px;
+            }
+        }
+
+        /* 视频部分样式 */
+        .video-section {
+            margin: 3rem 0;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-section h2 {
+            color: #1a73e8;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .video-section {
+                padding: 1rem;
+            }
+            
+            .video-section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* 在较大屏幕上使用更大的宽度 */
+        @media (min-width: 1400px) {
+            .video-container {
+                max-width: 1200px;
+            }
+        }
+
+        /* 导航链接样式 */
+        .header-nav {
+            margin-top: 1rem;
+        }
+
+        .doc-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .doc-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Logo 样式 */
+        .logo {
+            height: 40px;
+            width: 40px;
+        }
+
+        /* 下载区域样式 */
+        .download-section {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .download-content {
+            position: relative;
+            width: 340px;
+        }
+
+        .cta-button {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 1rem 1rem 50px;
+            position: relative;
+            white-space: nowrap;
+            font-size: 1.1rem;
+        }
+
+        .logo {
+            position: absolute;
+            height: 35px;
+            width: auto;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .download-content {
+                width: 340px;
+            }
+            
+            .logo {
+                height: 30px;
+                left: 20px;
+            }
+            
+            .cta-button {
+                padding-left: 65px;
+                font-size: 1rem;
+            }
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .cta .download-content {
+                width: 320px;  /* 与上面的下载按钮保持一致 */
+            }
+            
+            .cta .cta-button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+
+<header>
+    <h1>StepListen</h1>
+    <h2>Master Any Audio Content, One Step at a Time</h2>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Transform Your Language Learning Journey</h1>
+        <p>Break down native speech into manageable segments. Learn at your own pace.</p>
+        <div class="download-section">
+            <div class="download-content">
+                <img src="logo.png" alt="StepListen Logo" class="logo">
+                <a href="https://apps.apple.com/us/app/steplisten/id6740468855" class="cta-button">Download on Mac App Store</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>See StepListen in Action</h2>
+        <div class="video-container">
+            <video controls playsinline>
+                <source src="https://img.sanhaoxiangshang.com/vdm/ota-app/merchant/sl-1080.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose StepListen?</h2>
+        
+        <div class="features-grid">
+            <div class="feature">
+                <h3>🎯 Smart Segmentation</h3>
+                <p>Automatically splits audio into natural, bite-sized segments for easier learning</p>
+            </div>
+
+            <div class="feature">
+                <h3>🎵 Lyrics Study Assistant</h3>
+                <p>Import LRC files for synchronized lyrics display - perfect for learning through music</p>
+            </div>
+
+            <div class="feature">
+                <h3>⌨️ Keyboard-Focused Control</h3>
+                <p>Efficient shortcuts for seamless learning experience</p>
+            </div>
+
+            <div class="feature">
+                <h3>🌍 Multi-language Support</h3>
+                <p>Available in 10 major languages including English, Spanish, Japanese, and more</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases">
+        <h2>Perfect For:</h2>
+        <ul>
+            <li>Language Test Preparation (IELTS/TOEFL/Cambridge)</li>
+            <li>Music Lovers Learning Foreign Songs</li>
+            <li>Podcast and Speech Learning</li>
+            <li>Daily Language Practice</li>
+        </ul>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="story">
+        <h2>From Personal Frustration to Practical Solution</h2>
+        <p>Born from a language learner's struggle with native-speed content, StepListen was created to make audio learning more approachable and effective. What started as a personal tool has grown into a companion for language learners worldwide.</p>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Ready to Transform Your Language Learning?</h2>
+        <p>Only $9.99 - One-time Purchase</p>
+        <div class="download-content">
+            <a href="https://apps.apple.com/us/app/steplisten/id6740468855" class="cta-button">Get StepListen Now</a>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="requirements">
+        <h3>System Requirements</h3>
+        <p>Requires macOS 10.15 or later</p>
+        <p>Supports MP3, WAV, M4A audio formats</p>
+        <div class="requirements-links">
+            <div class="download-content">
+                <a href="doc.html" class="cta-button">User Guide</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 StepListen. All rights reserved.</p>
+    <a href="privacy-policy.html">Privacy Policy</a>
+</footer>
+
+   
+</body>
+</html>
