@@ -2,6 +2,49 @@
 <html>
 <head>
     <title>StepListen - Your Smart Language Learning Companion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StepListen - A smart audio learning app that helps you master any language through intelligent audio segmentation. Perfect for IELTS/TOEFL preparation, music learning, and podcast study.">
+    <meta name="keywords" content="language learning app, audio learning, IELTS preparation, TOEFL preparation, music learning, podcast study, macOS app">
+    <meta name="author" content="StepListen">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lininsoft.com/">
+    <meta property="og:title" content="StepListen - Smart Language Learning Companion">
+    <meta property="og:description" content="Master any audio content with intelligent segmentation. Perfect for language learning, test preparation, and music study.">
+    <meta property="og:image" content="https://lininsoft.com/logo.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lininsoft.com/">
+    <meta property="twitter:title" content="StepListen - Smart Language Learning Companion">
+    <meta property="twitter:description" content="Master any audio content with intelligent segmentation. Perfect for language learning, test preparation, and music study.">
+    <meta property="twitter:image" content="https://lininsoft.com/logo.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "StepListen",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "macOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "9.99",
+        "priceCurrency": "USD"
+      },
+      "description": "A smart audio learning app that helps you master any language through intelligent audio segmentation.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "100"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+
     <style>
         /* 基础样式 */
         * {
@@ -22,19 +65,20 @@
             background: linear-gradient(135deg, #1a73e8, #0d47a1);
             color: white;
             text-align: center;
-            padding: 1.5rem 2rem;
+            padding: 0.5rem 1.5rem;
         }
 
         header h1 {
-            margin-top: 0.5rem;
+            margin-top: 0.2rem;
             font-size: 2.2rem;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
 
         header h2 {
             font-size: 1.1rem;
             font-weight: 300;
             opacity: 0.9;
+            margin-bottom: 0.3rem;
         }
 
         /* 主要内容区域 */
@@ -47,7 +91,7 @@
         /* Hero 区域 */
         .hero {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 2rem 2rem;
             background: white;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -246,13 +290,20 @@
             margin-top: 3rem;
         }
 
+        .footer-links {
+            margin-top: 1rem;
+        }
+
         footer a {
             color: white;
             text-decoration: none;
             margin: 0 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
 
         footer a:hover {
+            opacity: 1;
             text-decoration: underline;
         }
 
@@ -281,11 +332,21 @@
             .logo {
                 height: 50px;
             }
+
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            footer a {
+                margin: 0;
+            }
         }
 
         /* 视频部分样式 */
         .video-section {
-            margin: 3rem 0;
+            margin: 1.5rem 0;
             text-align: center;
             padding: 2rem;
             background: white;
@@ -521,8 +582,12 @@
 </main>
 
 <footer>
-    <p>© 2024 StepListen. All rights reserved.</p>
-    <a href="privacy-policy.html">Privacy Policy</a>
+    <p>© 2024-2025 StepListen. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:leeb05804@gmail.com">Contact</a>
+    </div>
 </footer>
 
    

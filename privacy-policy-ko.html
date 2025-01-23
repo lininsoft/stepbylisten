@@ -1,43 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>StepListen 개인정보 처리방침</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침 - StepListen</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+            color: white;
+            text-align: center;
+            padding: 1rem 1.5rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin: 2rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 2rem 0;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+                margin: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>StepListen 개인정보 처리방침</h1>
-    <p>최종 수정일: [날짜]</p>
+    <header>
+        <h1>개인정보 처리방침</h1>
+    </header>
 
-    <h2>소개</h2>
-    <p>StepListen은 귀하의 개인정보를 존중하며 보호하기 위해 최선을 다하고 있습니다. 본 개인정보 처리방침은 귀하가 당사의 애플리케이션을 사용할 때 정보를 어떻게 처리하는지 설명합니다.</p>
+    <div class="container">
+        <h2>1. 수집하는 정보</h2>
+        <p>StepListen은 개인정보를 수집하지 않습니다. 애플리케이션은 오디오 파일을 사용자의 기기에서 로컬로 처리하며 외부 서버로 데이터를 전송하지 않습니다.</p>
 
-    <h2>정보 수집</h2>
-    <p>StepListen은 어떠한 개인정보도 수집하지 않습니다. 앱은 전적으로 귀하의 로컬 기기에서 작동합니다:</p>
-    <ul>
-        <li>오디오 파일은 귀하의 기기에서 로컬로 처리됩니다</li>
-        <li>전사 내용은 귀하의 기기에 로컬로 저장됩니다</li>
-        <li>외부 서버로 데이터가 전송되지 않습니다</li>
-        <li>분석 또는 추적 시스템이 구현되어 있지 않습니다</li>
-    </ul>
+        <h2>2. 오디오 콘텐츠</h2>
+        <p>StepListen에서 사용하는 모든 오디오 파일과 콘텐츠는 사용자의 기기에 저장됩니다. 당사는 사용자의 오디오 콘텐츠에 접근하거나 수집 또는 저장하지 않습니다.</p>
 
-    <h2>데이터 저장</h2>
-    <p>모든 데이터(오디오 파일 및 전사 내용 포함)는 귀하의 기기에 로컬로 저장됩니다. 귀하는 이 데이터를 완전히 제어할 수 있으며 언제든지 삭제할 수 있습니다.</p>
+        <h2>3. App Store 데이터</h2>
+        <p>Mac App Store에서 StepListen을 다운로드할 때, Apple은 자사의 개인정보 처리방침에 따라 특정 정보를 수집할 수 있습니다. 자세한 내용은 Apple의 개인정보 처리방침을 참조하시기 바랍니다.</p>
 
-    <h2>제3자 서비스</h2>
-    <p>StepListen은 데이터를 수집하는 어떠한 제3자 서비스도 사용하지 않습니다.</p>
+        <h2>4. 분석</h2>
+        <p>StepListen은 분석 도구나 추적 메커니즘을 사용하지 않습니다. 애플리케이션 사용은 완전히 비공개로 이루어집니다.</p>
 
-    <h2>본 방침의 변경</h2>
-    <p>본 개인정보 처리방침은 수시로 업데이트될 수 있습니다. 변경사항은 이 페이지에 게시될 것입니다.</p>
+        <h2>5. 데이터 저장</h2>
+        <p>설정을 포함한 모든 애플리케이션 데이터는 사용자의 기기에 로컬로 저장됩니다. 당사는 사용자의 정보를 저장하기 위한 서버나 데이터베이스를 운영하지 않습니다.</p>
 
-    <h2>문의하기</h2>
-    <p>본 개인정보 처리방침에 대해 문의사항이 있으시면 다음 주소로 연락해 주시기 바랍니다: leeb05804@gmail.com</p>
+        <h2>6. 제3자 서비스</h2>
+        <p>StepListen은 제3자 서비스나 API와 연동하지 않습니다. 애플리케이션은 완전히 오프라인으로 독립적으로 작동합니다.</p>
+
+        <h2>7. 아동의 개인정보</h2>
+        <p>StepListen은 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+        <h2>8. 개인정보 처리방침 변경</h2>
+        <p>본 개인정보 처리방침은 수시로 업데이트될 수 있습니다. 변경사항이 있을 경우 이 페이지에 게시됩니다.</p>
+
+        <h2>9. 문의하기</h2>
+        <p>본 개인정보 처리방침에 대해 문의사항이 있으시면 다음 이메일로 연락해 주시기 바랍니다: <a href="mailto:leeb05804@gmail.com">leeb05804@gmail.com</a></p>
+
+        <a href="index.html" class="back-link">← 홈으로 돌아가기</a>
+    </div>
+
+    <footer>
+        <p>© 2024-2025 StepListen. 모든 권리 보유.</p>
+    </footer>
 </body>
 </html>
