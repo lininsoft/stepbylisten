@@ -9,16 +9,16 @@
     <meta name="author" content="StepListen">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lininsoft.com/">
+    <meta property="og:url" content="https://steplisten.com/">
     <meta property="og:title" content="StepListen - Smart Language Learning Companion">
     <meta property="og:description" content="Master any audio content with intelligent segmentation. Perfect for language learning, test preparation, and music study.">
-    <meta property="og:image" content="https://lininsoft.com/logo.jpg">
+    <meta property="og:image" content="https://steplisten.com/logo.png">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://lininsoft.com/">
+    <meta property="twitter:url" content="https://steplisten.com/">
     <meta property="twitter:title" content="StepListen - Smart Language Learning Companion">
     <meta property="twitter:description" content="Master any audio content with intelligent segmentation. Perfect for language learning, test preparation, and music study.">
-    <meta property="twitter:image" content="https://lininsoft.com/logo.jpg">
+    <meta property="twitter:image" content="https://steplisten.com/logo.png">
 
     <script type="application/ld+json">
     {
@@ -66,6 +66,21 @@
             color: white;
             text-align: center;
             padding: 0.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header .title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 4px;
+        }
+
+        header .logo {
+            width: 40px;
+            height: 40px;
         }
 
         header h1 {
@@ -329,8 +344,9 @@
                 padding: 1rem;
             }
 
-            .logo {
-                height: 50px;
+            header .logo {
+                width: 32px;
+                height: 32px;
             }
 
             .footer-links {
@@ -417,12 +433,6 @@
             transform: translateY(-2px);
         }
 
-        /* Logo 样式 */
-        .logo {
-            height: 40px;
-            width: 40px;
-        }
-
         /* 下载区域样式 */
         .download-section {
             margin-top: 2rem;
@@ -435,34 +445,10 @@
             width: 340px;
         }
 
-        .cta-button {
-            width: 100%;
-            text-align: center;
-            padding: 1rem 1rem 1rem 50px;
-            position: relative;
-            white-space: nowrap;
-            font-size: 1.1rem;
-        }
-
-        .logo {
-            position: absolute;
-            height: 40px;
-            width: auto;
-            left: 25px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
-
         /* 响应式调整 */
         @media (max-width: 768px) {
             .download-content {
                 width: 340px;
-            }
-            
-            .logo {
-                height: 30px;
-                left: 20px;
             }
             
             .cta-button {
@@ -471,15 +457,98 @@
             }
         }
 
+        /* Mac App Store 按钮样式 */
+        .mac-store-button {
+            display: inline-flex;
+            align-items: center;
+            background: #000;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            border: none;
+            gap: 12px;
+            min-width: 240px;
+            justify-content: center;
+        }
+
+        .mac-store-button:hover {
+            background: #333;
+        }
+
+        .mac-store-button svg {
+            height: 28px;
+            width: auto;
+            fill: currentColor;
+        }
+
+        .mac-store-button .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.2;
+        }
+
+        .mac-store-button .small-text {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .mac-store-button .big-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
         /* 响应式调整 */
         @media (max-width: 768px) {
-            .cta .download-content {
-                width: 320px;  /* 与上面的下载按钮保持一致 */
+            .mac-store-button {
+                padding: 10px 20px;
+                min-width: 220px;
             }
             
-            .cta .cta-button {
-                font-size: 1rem;
+            .mac-store-button svg {
+                height: 24px;
             }
+            
+            .mac-store-button .small-text {
+                font-size: 0.75rem;
+            }
+            
+            .mac-store-button .big-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* User Guide 按钮样式 */
+        .requirements .cta-button {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 12px 24px;
+            background: #1a73e8;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+        }
+
+        .requirements .cta-button:hover {
+            background: #1557b0;
+        }
+
+        .requirements .download-content {
+            max-width: 240px;
+            margin: 0 auto;
+        }
+
+        /* Call to Action 区域样式 */
+        .cta .price {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 1rem 0;
         }
     </style>
 </head>
@@ -487,7 +556,10 @@
    
 
 <header>
-    <h1>StepListen</h1>
+    <div class="title-wrapper">
+        <img src="logo.png" alt="StepListen Logo" class="logo">
+        <h1>StepListen</h1>
+    </div>
     <h2>Master Any Audio Content, One Step at a Time</h2>
 </header>
 
@@ -497,10 +569,15 @@
         <h1>Transform Your Language Learning Journey</h1>
         <p>Break down native speech into manageable segments. Learn at your own pace.</p>
         <div class="download-section">
-            <div class="download-content">
-                <img src="logo.png" alt="StepListen Logo" class="logo">
-                <a href="https://apps.apple.com/us/app/steplisten/id6740468855" class="cta-button">Download on Mac App Store</a>
-            </div>
+            <a href="https://apps.apple.com/us/app/steplisten/id6740468855" class="mac-store-button">
+                <svg viewBox="0 0 384 512" width="24" height="24">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+                </svg>
+                <span class="text">
+                    <span class="small-text">Download on the</span>
+                    <span class="big-text">Mac App Store</span>
+                </span>
+            </a>
         </div>
     </section>
 
@@ -562,9 +639,17 @@
     <!-- Call to Action -->
     <section class="cta">
         <h2>Ready to Transform Your Language Learning?</h2>
-        <p>Only $9.99 - One-time Purchase</p>
+        <p class="price">Only $9.99 - One-time Purchase</p>
         <div class="download-content">
-            <a href="https://apps.apple.com/us/app/steplisten/id6740468855" class="cta-button">Get StepListen Now</a>
+            <a href="https://apps.apple.com/us/app/steplisten/id6740468855" class="mac-store-button">
+                <svg viewBox="0 0 384 512" width="24" height="24">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+                </svg>
+                <span class="text">
+                    <span class="small-text">Download on the</span>
+                    <span class="big-text">Mac App Store</span>
+                </span>
+            </a>
         </div>
     </section>
 
