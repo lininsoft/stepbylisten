@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /doc/
+Allow: /privacy-policy.html
+Allow: /terms.html
+
+# Sitemap
+Sitemap: https://steplisten.com/sitemap.xml 
