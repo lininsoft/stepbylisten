@@ -441,6 +441,7 @@
             margin-top: 2rem;
             display: flex;
             justify-content: center;
+            gap: 20px; /* 按钮之间的间距 */
         }
 
         /* Call to Action 区域样式 */
@@ -547,6 +548,22 @@
             max-width: 240px;
             margin: 0 auto;
         }
+
+        .mac-store-button.free-trial {
+            background: #4CAF50; /* 绿色背景 */
+        }
+
+        .mac-store-button.free-trial:hover {
+            background: #45a049;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .download-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -573,6 +590,12 @@
                 <span class="text">
                     <span class="small-text">Download on the</span>
                     <span class="big-text">Mac App Store</span>
+                </span>
+            </a>
+            <a href="https://img.sanhaoxiangshang.com/vdm/ota-app/merchant/steplisten/StepListen%201.0.1.dmg" class="mac-store-button free-trial">
+                <span class="text">
+                    <span class="small-text">Try it for free</span>
+                    <span class="big-text">Download Trial</span>
                 </span>
             </a>
         </div>
