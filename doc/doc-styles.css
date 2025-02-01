@@ -82,6 +82,7 @@ li {
     display: flex;
     align-items: center;
     gap: 10px;
+    visibility: hidden;/* hiddden language selector */
 }
 
 .language-selector select {

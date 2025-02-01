@@ -10,16 +10,6 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    <url>
-        <loc>https://steplisten.com/privacy-policy.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://steplisten.com/terms.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
     <!-- 多语言文档页面 -->
     <url>
         <loc>https://steplisten.com/doc/doc-es.html</loc>
@@ -65,5 +55,56 @@
         <loc>https://steplisten.com/doc/doc-zh-Hans.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/terms/terms.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <!-- 多语言隐私页面 -->
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy-de.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy-es.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy-fr.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy-ko.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy-ja.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy-ru.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy-th.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://steplisten.com/privacy/privacy-policy-vi.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
 </urlset> 
